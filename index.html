@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+  <meta name="viewport" content="transparent-background">
+  
+  <title>Prismatic: Page Orientation</title>
+  <script src="https://unpkg.com/@magicleap/prismatic"></script>
+  <script>
+  function setOrientation(orientation) {
+    if (orientation === "upright" || orientation === "flat") {
+        window.mlWorld.orientation = orientation;
+    }
+    console.log("set orientation to " + orientation);
+  }
+
+  function getOrientation() {
+    var orientation = window.mlWorld.orientation;
+    alert("The current page orientation is " + orientation);
+  }
+  </script>
+</head>
+<body>
+  <ul>
+    <li onClick='setOrientation("upright")'>Orientation:Upright</li>
+    <li onClick='setOrientation("flat")'>Orientation:Flat</li>
+    <li onClick='getOrientation()'>Current Orientation</li>
+</ul>
+</body>
+</html>
