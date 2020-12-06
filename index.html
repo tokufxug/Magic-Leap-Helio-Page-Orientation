@@ -18,6 +18,15 @@
         window.mlWorld.orientation = orientation;
     }
     console.log("set orientation to " + orientation);
+    
+    if (orientation === "flat")
+    {
+        balloon.rotation = '-90deg, 0, 0';
+    }
+    else if (orientation === "upright")
+    {
+        balloon.rotation = '0, 0, 0';
+    }
   }
 
   function getOrientation() {
@@ -34,12 +43,12 @@
   </ul>
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.613783346604!2d139.7941769152778!3d35.71112063593956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ec6db068cd1%3A0xd9a856805c8012bd!2z6Zu36ZaA!5e0!3m2!1sja!2sjp!4v1607247539008!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   <ml-stage id="stage" extents="left:200px;">
-  
   </ml-stage>
   
   <ml-model
+    id="balloon"
     src="balloon.glb"
-    style="width: 300px; height: 300px; position: absolute; left: -200px; top: 50%;"
+    style="width: 300px; height: 300px; position: absolute; left: -250px; top: 40%;"
     z-offset="300px"
     extractable="true"
     extracted-scale="5">
